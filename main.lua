@@ -69,6 +69,7 @@ client:on("slashCommandsReady", function()
 		
 	local _chad_cmd = slash.new("chad", "Determines if you're a chad.")
 	_chad_cmd:callback(function(ia, params, cmd)
+	_chad_cmd:option("player", "Player name", slash.enums.optionType.string, true)
 		if args.name == "Jona" OR args.name == "John" then
 			ia:reply("Yes, he's a chad!")
 		else 
