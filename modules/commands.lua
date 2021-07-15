@@ -153,7 +153,7 @@ cmds["unload"] = {
 
 cmds["reload"] = cmds["load"]
 
-cmds["am I a chad?] =
+cmds["chad"] =
 {
 	function(arg, msg)
 		local name = arg
@@ -161,4 +161,9 @@ cmds["am I a chad?] =
 		else then return {content = "No, you are not a chad, try again next time!"} end false
 }
 
+cmd["addfeature"] = 
+{
+	function(arg, msg)
+	return {content = "https://github.com/Johnnynator/Jeff"} end false
+}
 return {onMessageCreate = onMessageCreate}
