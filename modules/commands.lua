@@ -157,7 +157,7 @@ cmds["am I a chad?] =
 {
 	function(arg, msg)
 		local name = arg
-		if name == "Jonagoldz" OR "John" then return {content = "Yes, he certainly is a chad."} end
+		if name == "Jona" OR "John" then return {content = "Yes, he certainly is a chad."} end
 		else then return {content = "No, you are not a chad, try again next time!"} end false
 }
 
