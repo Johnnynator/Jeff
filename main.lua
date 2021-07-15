@@ -61,6 +61,19 @@ client:on("slashCommandsReady", function()
 		if params.player then ia:reply({embeds = {modules.embeds.history(params.player, params.days)}}) end
 	end)
 	client:slashCommand(_history_cmd:finish())
+	
+	local _request_cmd = slash.new("request", "Request a link for a request.")
+	_request_cmd:callback(function(ia, params, cmd) ia:reply("https://github.com/Johnnynator/Jeff") 
+	end)
+
+	local _chad_cmd = slash.new("chad", "Determines if you're a chad.")
+	_chad_cmd:callback(function(ia, params, cmd)
+		if local name = ("Jona" OR "John") then
+			ia:reply("Yes, he's a chad!")
+		else 
+			ia:reply("No, you're not a chad. Better luck next time!")
+		end
+	end)
 end)
 
 client:on("messageCreate", function(message) if modules.commands then modules.commands.onMessageCreate(message) end end)
