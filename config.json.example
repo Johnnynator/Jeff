@@ -1,0 +1,5 @@
+{
+    "token": "Bot <Insert your bot token>",
+    "data_path": "<insert path to data dir>",
+    "test_guild_id": ""
+}
