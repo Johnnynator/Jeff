@@ -65,15 +65,17 @@ client:on("slashCommandsReady", function()
 	local _request_cmd = slash.new("request", "Request a link for a request.")
 	_request_cmd:callback(function(ia, params, cmd) ia:reply("https://github.com/Johnnynator/Jeff") 
 	end)
-
+	client:slashCommand(_request_cmd:finish())
+		
 	local _chad_cmd = slash.new("chad", "Determines if you're a chad.")
 	_chad_cmd:callback(function(ia, params, cmd)
-		if local name = ("Jona" OR "John") then
+		if args.name == "Jona" OR args.name == "John" then
 			ia:reply("Yes, he's a chad!")
 		else 
 			ia:reply("No, you're not a chad. Better luck next time!")
 		end
 	end)
+	client:slashCommand(_chad_cmd:finish())
 end)
 
 client:on("messageCreate", function(message) if modules.commands then modules.commands.onMessageCreate(message) end end)
